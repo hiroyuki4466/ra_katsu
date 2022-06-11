@@ -1,0 +1,23 @@
+<div class ="sign_in_page">
+  <h2 class = "sign_in_title">ログイン</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="sign_in_field">
+    <%= f.label :メールアドレス %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="sign_in_field">
+    <%= f.label :パスワード %>
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <div class="sign_in_actions">
+    <%= f.submit "ログイン", class: "sign_in_button" %>
+  </div>
+<% end %>
+  <div class="sign_in_actions">
+    <%= link_to "麺バー登録", "/users/sign_up", class: "sign_up_link" %>
+  </div>
+</div>

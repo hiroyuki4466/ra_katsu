@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RaKatsu</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class = "header_left_nav">
+        <%= image_tag "https://icooon-mono.com/i/icon_15061/icon_150611_64.png", class: "header_logo" %>
+        <%= link_to "ラー活ログ", root_path, class: "header_title" %>
+        <%= image_tag "https://icooon-mono.com/i/icon_15061/icon_150611_64.png", class: "header_logo" %>
+      </div>
+      <div class = "header_right_nav">
+      <% if user_signed_in? %>
+        <div class = "header_user_name">
+          <%= image_tag 'https://icooon-mono.com/i/icon_11048/icon_110481_64.png', class: "header_user_logo" %>
+          <%= current_user.name %>
+        </div>
+        <div class="user_menu">
+          <label for="input" class="hidden_menu">
+          <% if current_user.user_image.attached? %>
+            <%= image_tag current_user.user_image, class: "header_user_image" %>
+          <% else %>
+            <%= image_tag 'https://kotonohaworks.com/free-icons/wp-content/uploads/kkrn_icon_user_11.png', class: "header_user_image" %>
+          <% end %>
+          </label>
+          <input type="checkbox" id="input">
+            <ul class="hidden_menu_ul">
+              <li><%= link_to "訪麺店舗登録", new_post_path, class: "hidden_menu_li" %></li>
+              <li><%= link_to "訪麺店舗リスト", posts_path, class: "hidden_menu_li" %></li>
+              <li><%= link_to "アカウント編集", edit_user_registration_path, class: "hidden_menu_li" %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "hidden_menu_li" %></li>
+            </ul>
+        </div>
+      <% end %>
+      </div>
+    </header>
+    <%= yield %>
+    <footer>
+      <h4 class = "footer_message">© 2022 takerog.INK </h4>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+ja:
+  time:
+    formats:
+      default: "%年/%月/%日"

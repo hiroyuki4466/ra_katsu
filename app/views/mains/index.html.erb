@@ -1,0 +1,27 @@
+<div class = "main_page">
+  <% if user_signed_in? %>
+    <div class = "main_table">
+      <div class = "main_message">
+        <%= image_tag "https://icooon-mono.com/i/icon_11122/icon_111221_64.png", class: "main_table_logo" %>ラー活記録
+      </div>
+      <div>
+        <%= link_to "→訪麺店舗登録", new_post_path, class: "main_post_register_link" %>
+      </div>
+      <div>
+        <%= link_to "→訪麺店舗リスト", posts_path, class: "main_post_index_link" %>
+      </div>
+    </div>
+  <% else %>
+    <div class = "main_guest_table">
+      <div class = "main_message">
+        <%= image_tag "https://icooon-mono.com/i/icon_14142/icon_141421_64.png", class: "main_table_logo" %>ラー活を始める
+      </div>
+      <div>
+        <%= link_to "→ログイン", new_user_session_path, class: "main_sign_in_link" %>
+      </div>
+      <div>
+        <%= link_to "→麺バー登録", new_user_registration_path, class: "main_sign_up_link" %>
+      </div>
+    </div>
+  <% end %>
+</div>

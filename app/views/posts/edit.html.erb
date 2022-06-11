@@ -1,0 +1,48 @@
+<div class = "post_edit_page">
+  <div class = "post_edit_title">
+    <%= image_tag "https://icooon-mono.com/i/icon_15519/icon_155191_64.png", class: "post_edit_logo" %>
+    <h2>店舗情報編集</h2>
+    <%= image_tag "https://icooon-mono.com/i/icon_15519/icon_155191_64.png", class: "post_edit_logo" %>
+  </div>
+
+<%= form_with model: @post, local: true do |f| %>
+
+  <div class="post_edit_field">
+    <%= f.label :shop_name, "店舗名", class: "post_edit_label" %>
+    <%= f.text_field :shop_name, placeholder: "店舗名を入力", class: "post_edit_form" %>
+  </div>
+
+  <div class="post_edit_field">
+    <%= f.label :address, "住所", class: "post_edit_label" %>
+    <%= f.text_field :address, placeholder: "店舗住所を入力", class: "post_edit_form" %>
+  </div>
+
+  <div class="post_edit_field">
+    <%= f.label :visited_date, "来店日", class: "post_edit_label" %>
+    <%= f.date_field :visited_date, placeholder: "年/月/日", class: "post_edit_form" %>
+  </div>
+
+  <div class="post_edit_field">
+    <%= f.label :shop_score, "ポイント", class: "post_edit_label" %>
+    <%= f.text_field :shop_score, placeholder: "100点満点で入力", class: "post_edit_form" %>
+  </div>
+
+  <div class="post_edit_memo_field">
+    <%= f.label :shop_memo, "メモ", class: "post_edit_label" %>
+    <%= f.text_area :shop_memo, placeholder: "食べたメニューや定休日等", class: "post_edit_area" %>
+  </div>
+
+  <div class="post_edit_field">
+    <%= f.label :ramen_image, "ラーメン画像", class: "post_edit_label" %>
+    <%= f.file_field :ramen_image %>
+  </div>
+
+  <div class = "post_edit_actions">
+    <%= f.submit "更新", class: "post_edit_button" %>
+  </div>  
+<% end %>
+
+  <div class = "account_edit_actions">
+    <%= link_to "店舗一覧情報へ戻る", posts_path, class: "posts_back_button" %>
+  </div>
+</div>

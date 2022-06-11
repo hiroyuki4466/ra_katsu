@@ -1,0 +1,25 @@
+<div class = "post_show_page">
+    <%= image_tag @post.ramen_image, class: "post_show_image" %>
+
+  <div class = "post_show_nav">
+    <div class = "post_show_nav_list">
+      <p class = "post_show_shop_name"><%= @post.shop_name %></p>
+    </div>
+
+    <div class = "post_show_nav_list">
+    <p class = "post_show_shop_score"><%= @post.shop_score %> 点</p>
+    </div>
+
+    <div class = "post_show_nav_list">
+      <span>住所</span> <%= @post.address %>
+    </div>
+
+    <div class = "post_show_nav_list">
+      <span>来店日</span> <%= @post.visited_date.strftime('%Y年%m月%d日') %>
+    </div>
+
+    <div class = "post_show_nav_list">
+      <span>メモ</span> <%= @post.shop_memo %>
+    </div>
+  </div>
+</div>

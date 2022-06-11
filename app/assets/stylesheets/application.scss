@@ -1,0 +1,438 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import 'bootstrap';
+
+/*ヘッダー・フッター*/
+.main_page {
+  background-image: url("https://free-materials.com/adm/wp-content/uploads/2019/10/adpDSC_9750-1024x683.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 800px;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #FF3333;
+}
+
+footer {
+  font-family: 'Hannotate TC',sans-serif;
+  display: flex;
+  height: 250px;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF3333;
+  color: #EEEEEE;
+  width: 100%;
+}
+
+.header_left_nav {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.header_title {
+  color: #EEEEEE;
+  font-size: 30px;
+  font-family: 'Hannotate TC',sans-serif;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 150px;
+}
+
+.header_title:hover {
+  color: #FFFFEE;
+}
+
+.header_right_nav {
+  display: flex;
+  text-decoration: none;
+  margin-right: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header_user_name {
+  font-family: 'Hannotate TC',sans-serif;
+  font-size: large;
+  color: #EEEEEE;
+  display: flex;
+}
+
+.header_user_logo {
+  width: 40%;
+  height: 40%;
+  margin-right: 10px;
+}
+
+.header_user_image {
+  width: 10%;
+  height: 10%;
+
+}
+
+.user_menu {
+  display: block;
+}
+
+#input {
+  display: none;
+}
+
+.hidden_menu {
+  display: block;
+  color: #fff;
+  cursor :pointer;
+}
+
+.hidden_menu_ul {
+  list-style: none;
+  background-color: #FFFFCC;
+  z-index: 2;
+  width: 150px;
+  padding: 0;
+  text-align: center;
+}
+
+.hidden_menu_ul li {
+  text-decoration: none;
+  color: #222222;
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#input:checked ~ .hidden_menu_ul li {
+  height: 54px;
+  opacity: 1;
+}
+
+/*トップページ*/
+.main_guest_table {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  width: 30%;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.main_table {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  width: 20%;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.main_message {
+  font-family: 'Hannotate TC',sans-serif;
+  font-size: x-large;
+}
+
+.main_sign_in_link, .main_sign_up_link, .main_post_register_link, .main_post_index_link {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: large;
+  text-decoration: none;
+  color: #FF69A3;
+  margin: auto;
+}
+
+.main_sign_in_link:hover, .main_sign_up_link:hover, .main_post_register_link:hover, .main_post_index_link:hover {
+  color: #FFCC99;
+}
+
+/*新規登録・ログインページ*/
+.sign_up_page, .sign_in_page {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.sign_up_title, .sign_in_title {
+  font-family: 'Hannotate TC',sans-serif;
+  text-align: center;
+}
+
+.sign_up_field, .sign_in_field {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sign_up_actions, .sign_in_actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sign_up_button, .sign_in_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: medium;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2px 15px;
+  background-color: #00BFFF;
+  color: white;
+  width: 330px;
+}
+
+.sign_in_link, .sign_up_link {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 15px;
+  background-color: #EEEEEE;
+  color: black;
+  text-decoration: none;
+}
+
+.sign_up_link {
+  padding-left: 125px;
+  padding-right: 125px;
+}
+
+/*アカウント編集ページ*/
+.account_edit_page {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.account_edit_title {
+  font-family: 'Hannotate TC',sans-serif;
+  text-align: center;
+}
+
+.account_edit_field {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.account_edit_actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.account_edit_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: medium;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2px 10px;
+  background-color: #00BFFF;
+  color: white;
+  width: 290px;
+}
+
+.back_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  color: black;
+  text-decoration: none;
+  padding: 5px 130px;
+}
+
+/*ポストページ*/
+.post_index_page, .post_register_page, .post_edit_page {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.post_index_title {
+  font-family: 'Hannotate TC',sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.post_index_table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 90%;
+  margin: auto;
+  
+}
+
+thead tr, thead th {
+  text-align: center;
+  width: 10%;
+  padding: 5px 0;
+  border: 1px solid #EEEEEE;
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  background-color: #DDDDDD;
+}
+
+tbody tr, tbody td {
+  text-align: center;
+  width: 10%;
+  height: 100px;
+  padding: 5px 0;
+  border: 1px solid #EEEEEE;
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  background-color: #FFFFEE;
+  font-size: large;
+}
+
+.post_index_tbody_td {
+  color: #FF3333;
+  font-size: x-large;
+}
+
+.post_index_image {
+  width: 100%;
+  height: 100%;
+}
+
+.post_index_shop_name {
+  font-size: x-large;
+  text-decoration: none;
+  color: black;
+}
+
+.post_index_edit_link {
+  color: #00BFFF;
+  font-size: medium;
+}
+
+.post_register_logo, .post_edit_logo {
+  width: 5%;
+  height: 5%;
+}
+
+.post_register_title, .post_index_title, .post_edit_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Hannotate TC',sans-serif;
+  text-align: center;
+}
+
+.post_register_title h2, .post_index_title h2, .post_edit_title h2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.post_register_field, .post_edit_field {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.post_register_memo_field, .post_edit_memo_field {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post_register_label, .post_edit_label {
+  margin-right: 10px;
+}
+
+.post_register_form, .post_edit_form {
+  width: 200px;
+}
+
+.post_register_area, .post_edit_area {
+  width: 250px;
+  height: 150px;
+}
+
+.post_register_actions, .post_edit_actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.post_register_button, .post_edit_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-size: medium;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 2px 10px;
+  background-color: #00BFFF;
+  color: white;
+  width: 290px;
+}
+
+.post_index_link {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  color: black;
+  text-decoration: none;
+  padding: 5px 90px;
+}
+
+.post_show_page {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.post_show_image {
+  width: 50%;
+}
+
+.post_show_nav {
+  border: 1px solid #EEEEEE;
+  text-align: center;
+  margin: auto;
+  padding: 40px 100px;
+}
+
+.post_show_shop_name {
+  font-size: 30px;
+}
+
+.post_show_shop_score {
+  font-size: 20px;
+  color: #FF3333;
+}
+
+.post_show_nav_list {
+  margin-bottom: 20px;
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+}
+
+.post_show_nav_list span {
+  border: 1px solid #EEEEEE;
+  padding: 5px;
+  background-color: #DDDDDD;
+}
+
+.posts_back_button {
+  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  color: black;
+  text-decoration: none;
+  padding: 5px 72px;
+}

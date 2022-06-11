@@ -1,0 +1,33 @@
+<div class = "post_index_page">
+  <div class = "post_index_title">
+    <%= image_tag "https://icooon-mono.com/i/icon_15519/icon_155191_64.png", class: "post_index_logo" %>
+    <h2>訪麺店舗リスト</h2>
+    <%= image_tag "https://icooon-mono.com/i/icon_15519/icon_155191_64.png", class: "post_index_logo" %>
+  </div>
+
+  <table class = "post_index_table">
+    <thead class = "post_index_thead">
+      <tr>
+        <th>画像</th>
+        <th>店名</th>
+        <th>住所</th>
+        <th>最終来店日</th>
+        <th>ポイント</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody class = "post_index_tbody">
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= image_tag post.ramen_image, class: "post_index_image" %></td>
+        <td><%= link_to post.shop_name, post_path(post), class: "post_index_shop_name" %></td>
+        <td><%= post.address %></td>
+        <td><%= post.visited_date.strftime('%Y年%m月%d日') %></td>
+        <td class ="post_index_tbody_td"><%= post.shop_score %> 点</td>
+        <td><%= link_to "店舗情報編集", edit_post_path(post), class: "post_index_edit_link" %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
